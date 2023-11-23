@@ -4,8 +4,5 @@ class Index{
     public static $instance;
     public  function __construct(){
         self::$name = "Mg Mg";
-
-
-
     }
 }
