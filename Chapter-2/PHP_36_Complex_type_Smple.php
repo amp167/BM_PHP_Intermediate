@@ -1,6 +1,18 @@
 <?php
-
-class car{
+class Rent{
+    public $car,$driver;
+    public function __construct(Car $car,Driver $driver){
+        $this->car = $car;
+        $this->driver = $driver;
+    }
+    public function getCar(): Car {
+        return $this->car;
+    }
+    public  function getDriver(): Driver {
+        return $this->driver;
+    }
+}
+class Car{
     public $brand , $model , $price , $spares ,$available;
     public function __construct(string $brand,int $model,float $price,array $spares,bool $available){
         $this->brand = $brand;
@@ -66,7 +78,7 @@ class Driver{
     public function setMartialStatus(bool $martialStatus){
         $this->martialStatus = $martialStatus;
     }
-    public function getMartialStatus()
+    public function getMartialStatus() : bool
     {
         return $this->martialStatus;
     }
@@ -84,3 +96,15 @@ $dAungAung->age = 28;
 $dAungAung->family = ["Father"=>"U Myint","Mother"=>"Daw Yin","Sister"=>"Su Su"];
 $dAungAung->hourlyRate = 9.5;
 $dAungAung->martialStatus = true;
+
+$toyota = new Car("toyota",2000,30.5,["Tissues","Water","Coupon"],true);
+$suzuki = new Car("suzuki",2010,40.5,["Tissues","Water"],false);
+
+$rent1 = new Rent($toyota,$dmgmg);
+$rent2 = new Rent($suzuki,$dAungAung);
+
+$list = [$rent1,$rent2];
+
+echo "<pre>";
+print_r($list[0]->getCar()->getBrand());
+print_r($list[0]->getDriver()->getName());
