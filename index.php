@@ -1,2 +1,2 @@
 <?php
-include_once "Chapter-2/PHP_29_Singletone.php";
+include_once "Chapter-2/PHP_40_closure_function.php";
