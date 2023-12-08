@@ -1,0 +1,8 @@
+{
+  "autoload": {
+    "psr-4": {
+      "abb\\": "abb",
+      "haha\\": "haha"
+    }
+  }
+}
