@@ -1,15 +1,25 @@
 <?php
+
+
 require_once "vendor/autoload.php";
+
+use app\gem\shape;
 
 class Index
 {
     public function __construct()
     {
         $sq = new \app\square(20, 40);
-        echo "Area of Square is " . $sq->getArea() . "<hr>";
+        $this->getAreaPrice($sq);
 
         $cir = new \app\circle(10);
-        echo "Area of Circle is " . $cir->getArea();
+        $this->getAreaPrice($cir);
+    }
+
+    public function getAreaPrice(Shape $shape)
+    {
+        $area = $shape->getArea();
+        echo "The price of Area is " . number_format(($area * 17), 2) . " Ks<hr>";
     }
 }
 
