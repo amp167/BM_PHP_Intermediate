@@ -12,7 +12,11 @@
   </component>
   <component name="PhpIncludePathManager">
     <include_path>
+      <path value="$PROJECT_DIR$/Chapter-3/vendor/composer" />
+      <path value="$PROJECT_DIR$/Chapter-2/psr4_autoload/vendor/composer" />
+      <path value="$PROJECT_DIR$/Chapter-2/Depen Auth/vendor/composer" />
       <path value="$PROJECT_DIR$/Chapter-2/composer test/vendor/composer" />
+      <path value="$PROJECT_DIR$/Chapter-2/Polymorphism/vendor/composer" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="8.1" />
